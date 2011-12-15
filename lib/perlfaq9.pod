@@ -229,7 +229,7 @@ the form using the C<query_form> method:
     use LWP::Simple;
     use URI::URL;
 
-    my $url = url('L<http://www.perl.com/cgi-bin/cpan_mod')>;
+    my $url = url('L<http://www.perl.com/cgi-bin/cpan_mod>');
     $url->query_form(module => 'DB_File', readme => 1);
     $content = get($url);
 
@@ -240,7 +240,7 @@ the content appropriately.
     use LWP::UserAgent;
 
     my $ua = LWP::UserAgent->new();
-    my $req = POST 'L<http://www.perl.com/cgi-bin/cpan_mod'>,
+    my $req = POST 'L<http://www.perl.com/cgi-bin/cpan_mod>',
                    [ module => 'DB_File', readme => 1 ];
     my $content = $ua->request($req)->as_string;
 
